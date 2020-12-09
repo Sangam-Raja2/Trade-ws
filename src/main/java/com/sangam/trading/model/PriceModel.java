@@ -2,7 +2,7 @@ package com.sangam.trading.model;
 
 /**
  *
- * @author Girish
+ * @author Sangam
  */
 public class PriceModel {
 

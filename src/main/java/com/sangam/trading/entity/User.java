@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
  *
- * @author Girish
+ * @author Sangam
  */
 @Entity
 @Table(name = "user")

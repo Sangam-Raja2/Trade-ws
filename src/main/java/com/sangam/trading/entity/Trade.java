@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
  *
- * @author Girish
+ * @author Sangam
  */
 @Entity
 @Table(name = "trade")
