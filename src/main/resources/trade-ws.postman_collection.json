@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "07b85d94-a463-4bb7-9ab7-5844cb4049af",
+		"name": "Trading System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Creatate Trade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tradeId\": \"6\",\r\n    \"type\": \"shell\",\r\n    \"symbol\": \"AC\",\r\n    \"shares\": \"20\",\r\n    \"price\": \"45.00\",\r\n    \"timestamp\": \"2020-11-23 08:00:00\",\r\n    \"user\": {\r\n        \"userId\": \"6\",\r\n        \"userName\": \"anil\",\r\n        \"email\": \"anil@gmail.com\",\r\n        \"address\": \"india\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/trades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"trades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTradesByUserId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/trades/user/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"trades",
+						"user",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTrades",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/trades/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"trades",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAllTrades",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/trades/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"trades",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTradeByStockandType",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/trades/stocks/AC/trades?type=buy&start=2020-11-18&end=2020-11-19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"trades",
+						"stocks",
+						"AC",
+						"trades"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "buy"
+						},
+						{
+							"key": "start",
+							"value": "2020-11-18"
+						},
+						{
+							"key": "end",
+							"value": "2020-11-19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTradeByStockandPrice",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/trades/stocks/AC/price?start=2020-11-18&end=2020-11-23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"trades",
+						"stocks",
+						"AC",
+						"price"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-11-18"
+						},
+						{
+							"key": "end",
+							"value": "2020-11-23"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
